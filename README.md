@@ -1,14 +1,14 @@
+> [!NOTE]
+> The bot is heavily WIP, and is not ready for production use, and probably
+> full of bad coding practices, since I'm still learning Go.
+>
+> It's also not made to be used by other people, but you can if you want to.
+> Just be prepared to edit the source code to make it work for you.
+
 # Asuka
 
 A Discord bot written in Go for a server I'm staff of.
 Also my very first try at Go, because looking at tutorials is boring.
-
-> [!NOTE]
-> The bot is heavily WIP, and is not ready for production use, and probably
-> full of bad coding practices, since I'm still learning Go.
-> 
-> It's also not made to be used by other people, but you can if you want to.
-> Just be prepared to edit the source code to make it work for you.
 
 ## Features
 
