@@ -1,4 +1,4 @@
-package main
+package Store
 
 import "github.com/bwmarrin/discordgo"
 
@@ -14,8 +14,6 @@ type Store struct {
 	GuildID string
 	Clubs   []Club
 }
-
-var StoreInstance Store
 
 func (s *Store) AddClub(club Club) {
 	s.Clubs = append(s.Clubs, club)
@@ -46,3 +44,10 @@ func (s *Store) GetClubByChannel(channel *discordgo.Channel) *Club {
 	}
 	return nil
 }
+
+func (s *Store) GetAllClubs() []Club {
+	return s.Clubs
+}
+
+// Make a global instance
+var StoreInstance = Store{}

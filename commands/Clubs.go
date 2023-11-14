@@ -1,9 +1,14 @@
 package commands
 
-import "github.com/bwmarrin/discordgo"
+import (
+	"asuka/Store"
+	"asuka/commands/Clubs"
+	"github.com/bwmarrin/discordgo"
+)
 
 var (
-	ClubsSettings = discordgo.ApplicationCommand{
+	ListClubsChoices []discordgo.ApplicationCommandOptionChoice
+	ClubsSettings    = discordgo.ApplicationCommand{
 		Name:        "clubs",
 		Description: "The commands related to clubs",
 		Options: []*discordgo.ApplicationCommandOption{
@@ -61,12 +66,28 @@ var (
 						Name:        "name",
 						Description: "The name of the club",
 						Required:    true,
-						// Add choices with code
+						Choices:     ListClubsChoices, // FIXME
 					},
 				},
 			},
 		},
 	}
 
-	ClubsCommand = func(s *discordgo.Session, i *discordgo.InteractionCreate) {}
+	ClubsCommand = func(s *discordgo.Session, i *discordgo.InteractionCreate) {
+		switch i.ApplicationCommandData().Options[0].Name {
+		case "list":
+			Clubs.ListClubs(s, i)
+			//case "create":
+		}
+	}
 )
+
+func init() {
+	ListClubsChoices = make([]discordgo.ApplicationCommandOptionChoice, len(Store.StoreInstance.GetAllClubs()))
+	for i, v := range Store.StoreInstance.GetAllClubs() {
+		ListClubsChoices[i] = discordgo.ApplicationCommandOptionChoice{
+			Name:  v.Name,
+			Value: v.Name,
+		}
+	}
+}
