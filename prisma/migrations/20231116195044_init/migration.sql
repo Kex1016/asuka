@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE "Club" (
+CREATE TABLE "ClubTs" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE "Member" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "clubId" TEXT NOT NULL,
     "user" TEXT NOT NULL,
-    CONSTRAINT "Member_clubId_fkey" FOREIGN KEY ("clubId") REFERENCES "Club" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    CONSTRAINT "Member_clubId_fkey" FOREIGN KEY ("clubId") REFERENCES "ClubTs" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
 
 -- CreateTable

@@ -1,9 +1,11 @@
-import { SapphireClient } from '@sapphire/framework';
-import "util/init";
+import {SapphireClient} from '@sapphire/framework';
+import {configDotenv} from "dotenv";
+
+configDotenv();
 
 const client = new SapphireClient({
-    intents: ['Guilds', 'GuildMessages'],
-    loadMessageCommandListeners: true, // TODO: commands and listeners
+  intents: ['Guilds', 'GuildMessages'],
+  loadMessageCommandListeners: true,
 });
 
 client.login(process.env.TOKEN);

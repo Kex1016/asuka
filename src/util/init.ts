@@ -1,4 +1,1 @@
-import {configDotenv} from "dotenv";
-configDotenv();
-
-// TODO: add more init logic
+// TODO: Find a way to use this, idk lol

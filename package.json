@@ -4,13 +4,21 @@
   "description": "Discord bot written with Sapphire in Typescript.",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
   },
   "author": "Kex1016",
   "license": "MIT",
   "dependencies": {
     "@prisma/client": "^5.6.0",
-    "@sapphire/framework": "^4.7.2",
+    "@sapphire/decorators": "^6.0.2",
+    "@sapphire/discord.js-utilities": "^7.1.2",
+    "@sapphire/framework": "^4.8.2",
+    "@sapphire/plugin-subcommands": "^5.1.0",
+    "@sapphire/utilities": "^3.13.0",
+    "discord-api-types": "^0.37.63",
     "discord.js": "^14.14.1",
     "dotenv": "^16.3.1"
   },
