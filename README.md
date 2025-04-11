@@ -1,13 +1,15 @@
-> [!NOTE]
-> This was once a Go project. I decided to scrap it, since
-> I have no idea how to write proper Go code yet.
-> 
-> The code is saved, I will revive it one day.
+# asuka-bun
 
-# Asuka
+To install dependencies:
 
-A Discord bot written in Typescript. More info soon.
+```bash
+bun install
+```
 
-## License
+To run:
 
-This project is licensed under the [MIT License](./LICENSE).
+```bash
+bun run index.ts
+```
+
+This project was created using `bun init` in bun v1.1.31. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

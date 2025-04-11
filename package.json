@@ -1,31 +1,23 @@
 {
-  "name": "asuka",
-  "version": "1.0.0",
-  "description": "Discord bot written with Sapphire in Typescript.",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "ts-node src/index.ts"
-  },
-  "author": "Kex1016",
-  "license": "MIT",
-  "dependencies": {
-    "@prisma/client": "^5.6.0",
-    "@sapphire/decorators": "^6.0.2",
-    "@sapphire/discord.js-utilities": "^7.1.2",
-    "@sapphire/framework": "^4.8.2",
-    "@sapphire/plugin-subcommands": "^5.1.0",
-    "@sapphire/utilities": "^3.13.0",
-    "discord-api-types": "^0.37.63",
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.1"
-  },
+  "name": "asuka-bun",
+  "module": "main.ts",
+  "type": "module",
   "devDependencies": {
-    "@types/node": "^20.9.0",
-    "prisma": "^5.6.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@nyx-discord/core": "^2.3.0",
+    "@nyx-discord/framework": "^2.5.0",
+    "discord-api-types": "^0.37.109",
+    "discord.js": "^14.16.3",
+    "mongoose": "^8.8.3"
+  },
+  "scripts": {
+    "start": "bun run main.ts",
+    "build:x64": "bun build --compile --target=bun-linux-x64 ./main.ts --outfile dist/asuka-x64 && cp -r {.env,locale.json} dist/ && mkdir -p dist/icons",
+    "build:arm64": "bun build --compile --target=bun-linux-arm64 ./main.ts --outfile dist/asuka-arm64 && cp -r {.env,locale.json} dist/ && mkdir -p dist/icons"
   }
 }

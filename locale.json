@@ -1,0 +1,177 @@
+{
+  "en-US": {
+    "generic": {
+      "success": {
+        "settingsUpdated": "Settings updated successfully."
+      },
+      "error": {
+        "unknown": "An unknown error occurred.",
+        "noIconLocation": "No icon location provided.",
+        "invalidIconLocation": "Invalid icon location provided.",
+        "noGuild": "You need to be in a server to use this command.",
+        "noPermission": "You don't have permission to use this command.",
+        "noSubmission": "No submission found.",
+        "noDMChannel": "Could not create a DM channel.",
+        "noSettings": {
+          "nothing": "This server doesn't have Asuka set up yet!",
+          "events": "This server doesn't have events set up yet!",
+          "roles": "This server doesn't have roles set up yet!",
+          "voting": {
+            "disabled": "Voting is disabled or not set up yet in this server.",
+            "noChannel": "Voting is enabled, but no voting channel is set up yet in this server.",
+            "noMax": "Voting is enabled, but the maximum number of suggestions hasn't been set up yet in this server.",
+            "noNameTemplate": "Voting is enabled, but the name template hasn't been set up yet in this server."
+          },
+          "admin": {
+            "noChannel": "This server doesn't have an admin channel set up yet!",
+            "noRole": "This server doesn't have an admin role set up yet!"
+          },
+          "event": {
+            "noChannel": "This server doesn't have an event channel set up yet!"
+          }
+        }
+      }
+    },
+    "embed": {
+      "submission": {
+        "title": "New submission!",
+        "description": "A new submission has been made by {user}.",
+        "fields": {
+          "name": "Server name"
+        },
+        "weekly": {
+          "title": "The week is over!",
+          "descriptionWinner": "And we have a winner from {user}!\nWith a score of {votes}, the theme of the week is...\n\n**{name}**!",
+          "descriptionNoWinner": "The week is over, but no winner was found."
+        }
+      },
+      "error": {
+        "title": "Error",
+        "description": "An error occurred: {message}"
+      },
+      "success": {
+        "title": "Success",
+        "description": "{message}"
+      }
+    },
+    "ping": {
+      "description": "Check Asuka's latency.",
+      "response": "Pong! My latency is {ping}ms."
+    },
+    "setup": {
+      "description": "Set up Asuka in your server.",
+      "get": {
+        "description": "Get the current settings for Asuka.",
+        "response": {
+          "title": "Asuka settings",
+          "description": "The current settings for this server:",
+          "general": {
+            "title": "General settings",
+            "description": "**Announcement channel:** {announceChannel}\n**Admin channel:** {adminChannel}\n**Embed fixer:** {embedFixer}\n**Timeout nyaboom:** {timeoutNyaboom}"
+          },
+          "voting": {
+            "title": "Voting settings",
+            "description": "**Voting enabled:** {votingEnabled}\n**Voting channel:** {votingChannel}\n**Max suggestions:** {maxSuggestions}\n**Name template:** {nameTemplate}\n-# <:reply:1303321572592844813> *{nameTemplateExample}*"
+          },
+          "event": {
+            "title": "Event settings",
+            "description": "**Event channel:** {eventChannel}"
+          }
+        }
+      },
+      "general": {
+        "title": "General settings",
+        "description": "Set up the general settings for Asuka.",
+        "adminChannel": "The channel where Asuka sends admin messages.",
+        "embedFixer": "Enable the embed fixer.",
+        "timeoutNyaboom": "Enable the funniest feature ever."
+      },
+      "voting": {
+        "title": "Voting settings",
+        "description": "Set up the voting settings for Asuka.",
+        "votingEnabled": "Enable voting.",
+        "votingChannel": "The channel where voting takes place.",
+        "maxSuggestions": "The maximum number of suggestions per user.",
+        "nameTemplate": "The template for the server name, where %C% is the submitted name. E.g.: \"%C% Club\""
+      },
+      "event": {
+        "title": "Event settings",
+        "description": "Set up the event settings for Asuka.",
+        "eventChannel": "The channel where events are announced."
+      }
+    },
+    "submit": {
+      "description": "Submit the server's next identity!",
+      "image": "The image to submit.",
+      "caption": "The server's name to go with the image.",
+      "response": {
+        "success": "Your submission has been successfully submitted.",
+        "votingChannel": "Your submission has been accepted and is now available in {channel}."
+      },
+      "admin": {
+        "accepted": "Submission accepted by {user}.",
+        "rejected": "Submission rejected by {user}."
+      },
+      "user": {
+        "accepted": "<:birthday_star:1303321829938692107> Your submission (`{submission}`) has been accepted!\n-# <:reply_continuing:1303321620047200317> [Go to channel]({channel})\n-# <:reply:1303321572592844813> [Download image]({image})",
+        "rejected": "<:kexDisgust3:783276543182110750> Your submission (`{submission}`) has been rejected.\n-# <:reply:1303321572592844813> [Download image]({image})",
+        "winner": "<:birthday_star:1303321829938692107> Your submission (`{submission}`) has won the voting!\n-# <:reply_continuing:1303321620047200317> [Go to channel]({channel})\n-# <:reply:1303321572592844813> [Download image]({image})"
+      },
+      "error": {
+        "noImage": "You need to provide an image to submit.",
+        "noText": "You need to provide a server name to go with the image.",
+        "invalidImage": "The image you provided is invalid.",
+        "imageTooLarge": "The image you provided is too large.",
+        "noVotingChannel": "Voting is enabled, but the voting channel couldn't be found.",
+        "saveImage": "There was an error saving the image.",
+        "noUser": "There was an error getting the user.",
+        "maxSubmissions": "You've reached the maximum number of submissions."
+      }
+    },
+    "events": {
+      "description": "Create or modify an event."
+    },
+    "boop": {
+      "description": "Get booped, idiot.",
+      "user": { "name": "The user to boop." },
+      "time": { "name": "The time to boop the user for." },
+      "response": [
+        "<a:nyaboomzoom:1250229235273170976> Rekt. Next time do better, {user} <a:nyaboomzoom:1250229235273170976>",
+        "What were you thinking, {user}? <a:nyaboomzoom:1250229235273170976>",
+        "{user} got mogged by a damn bot.",
+        "Splat. {user} is now pancake.",
+        "Boop! {user} is boopeth.",
+        "{user} got muted. Point and laugh. <a:nyaboomzoom:1250229235273170976><a:nyaboomzoom:1250229235273170976><a:nyaboomzoom:1250229235273170976><a:nyaboomzoom:1250229235273170976>",
+        "{user} you shouldn't have done that...",
+        "I am disappointed in you {user}. <a:nyaboomzoom:1250229235273170976>",
+        "I have a prophecy. {user} gets timed out."
+      ],
+      "error": [
+        "I couldn't boop {user}.",
+        "{user} would've gotten a big boop, but they are immune to them.",
+        "Cheater. {user} is immune to boops.",
+        "{user} is the boop stick's mortal enemy. It cannot approach their ~~stench~~ aura.",
+        "admin abuser..."
+      ],
+      "booped": [
+        "**{user}** is in timeout right now. Call back later.",
+        "**{user}** is very busy not being able to respond. They are in timeout.",
+        "Point and laugh, **{user}** is detained.",
+        "*sets down comically large toy hammer*\nteehee, I hit **{user}**'s head a bit too hard :3",
+        "**{user}** slipped on a banana peel and is currently in hospital. Check back later."
+      ]
+    },
+    "profile": {
+      "description": "View a user's profile.",
+      "user": { "name": "The user to view." },
+      "response": {
+        "title": "Profile",
+        "description": "Here is the profile for {user}:"
+      },
+      "error": {
+        "noUser": "You need to provide a user to view.",
+        "noProfile": "No profile found for {user}."
+      }
+    }
+  }
+}
