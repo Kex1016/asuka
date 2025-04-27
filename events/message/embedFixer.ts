@@ -39,9 +39,9 @@ class EmbedFixer extends AbstractDJSClientSubscriber<Events.MessageCreate> {
     ];
 
     const replacements = new Map<string, string>([
-      ["twitter.com", "peepeepoopoodumdumtwitterx.org"],
+      ["twitter.com", "girlcockx.com"],
       ["instagram.com", "ddinstagram.com"],
-      ["x.com", "peepeepoopoodumdumtwitterx.org"],
+      ["x.com", "girlcockx.com"],
       ["reddit.com", "rxddit.com"],
     ]);
 
